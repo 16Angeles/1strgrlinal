@@ -4,7 +4,7 @@
 #define PI 3.14159265
 using namespace std;
 int main() {
-    double A, B, C, D, E, F, x, y, a, b, a2, b2, x0, y0, exc, f, A1, B1, C1, D1, E1, F1;
+    float A, B, C, D, E, F, x, y, a, b, a2, b2, x0, y0, exc, f, A1, B1, C1, D1, E1, F1;
     cin >> A >> B >> C >> D >> E >> F;
 
     if ((A == 0) and (B == 0) and (C == 0) and (D == 0) and (E == 0) and (F != 0))
