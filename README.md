@@ -1,0 +1,4 @@
+# 1strgrlinal
+1st RGR LINAL 2021 coded by 16Angeles
+FIRST BAG REMOTE 08.12.2021 (DECEMBER) 
+LANGUAGE C++
