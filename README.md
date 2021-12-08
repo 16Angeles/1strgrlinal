@@ -1,4 +1,4 @@
 # FIRST RGR <br/>
-1st RGR LINAL 2021 coded by 16Angeles <br/>
+1st RGR LINAL 2021 by 16Angeles <br/>
 FIRST BAG FIX 08.12.2021 (DECEMBER) <br/>
 LANGUAGE C++ <br/>
