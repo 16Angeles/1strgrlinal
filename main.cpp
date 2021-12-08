@@ -30,9 +30,6 @@ int main() {
     b2 = -(F1 / C1);
     a = sqrt(a2);
 
-    printf("%f %f %f %f %f %f %f", A1, B1, C1, D1, E1, F1);
-    cout << '\n';
-
     if ((A*C) - (B*B/4) == 0)
     {
         if ((C != 0) and (B != (2 * sqrt(A) * sqrt(C)))) {
