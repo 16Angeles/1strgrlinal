@@ -33,7 +33,7 @@ int main() {
     a2 = -(F1 / A1);
     b2 = -(F1 / C1);
     a = sqrt(a2);
-
+    
    if ((A*C) - (B*B/4) == 0)
     {
         if ((C != 0) and (B != (2 * sqrt(A) * sqrt(C)))) {
@@ -67,10 +67,12 @@ int main() {
             if ((exc > 0) and (exc < 1)) {
                 ret(cout << "Ellipse " << "Excenticitet = " << exc << endl;)
             }
+            if ((exc == 0) and (B != 0))
+                ret(cout << "Ellipse povernutiy na 45,90,135,180 " << endl;)
             if (exc == 1) {
                 ret(cout << "Otrezok " << 1 << endl;)
             }
-            if ((exc == 0) or ((A != 0) and (B ==0) and (C != 0) and (D == 0) and (E == 0) and (F < 0))) {
+            if (((exc == 0) or ((A != 0) and (B ==0) and (C != 0) and (D == 0) and (E == 0)) and (F < 0)) and (a2 == b2) and (F < 0)) {
                 ret(cout << "Okruzhost " << 0 << endl;)
             }
             if (exc == 123) {
