@@ -85,16 +85,25 @@ int main() {
     {
         if ((((a2 > 0) and (b2 < 0)) or ((a2 == 1) and (b2 == -1))) or ((A == 0) and (C == 0) and (F != 0))) {
             exc = (sqrt(a2 + abs(b2))) / a;
-            ret(cout << "Hyperbola, " << "Excenticitet = " << exc << endl;)
+            if (a == 0)
+                ret(cout << "pair of intersecting lines " << endl;)
+            else
+                ret(cout << "Hyperbola, " << "Excenticitet = " << exc << endl;)
         }
         if ((a2 < 0) and (b2 > 0)) {
             exc = (sqrt(abs(a2) + b2) / sqrt(b2));
-            ret(cout << "Hyperbola, " << "Excenticitet = " << exc << endl;)
+            if (sqrt(b2) == 0)
+                ret(cout << "pair of intersecting lines " << endl;)
+            else
+                ret(cout << "Hyperbola, " << "Excenticitet = " << exc << endl;)
         }
         if (((A == 0) or (C == 0)) or ((A != 0) and (B != 0) and (C != 0)))
         {
             exc = sqrt(abs(a2) + abs(b2))/ sqrt(b2);
-            ret( cout << "Hyperbola, " << "Excentricitet = " << exc << endl;)
+            if (sqrt(b2) == 0)
+                ret(cout << "pair of intersecting lines " << endl;)
+            else
+                ret( cout << "Hyperbola, " << "Excentricitet = " << exc << endl;)
         }
         else {
             ret(cout << "Pustoe mnojestvo ili puchok pryamih (puchok esli b != 0)";)
