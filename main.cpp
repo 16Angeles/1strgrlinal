@@ -34,7 +34,7 @@ int main() {
     b2 = -(F1 / C1);
     a = sqrt(a2);
 
-    if ((A*C) - (B*B/4) == 0)
+   if ((A*C) - (B*B/4) == 0)
     {
         if ((C != 0) and (B != (2 * sqrt(A) * sqrt(C)))) {
             exc = 1;
@@ -44,7 +44,7 @@ int main() {
             if (F > 0)
             ret(cout << "Pustoe mnojestvo");
             if (F == 0)
-            ret(cout << "Pryamie kotorie sovpali");
+            ret(cout << "Pryamie kotorie sovpali ili prosto pryamaya(esli v itoge chto-to vrode 2x = 0 or same shit)");
             if (F < 0)
             ret(cout << "Para pryamih");
         }
@@ -52,8 +52,8 @@ int main() {
 
     if ((A*C) - (B * B /4) > 0) {
         if ((a2 > 0) and (b2 > 0)) {
-            if ((A1 == C1) and (F < 0) and (A != 1)) {
-                ret(cout << "Ellipse, kotoriy povorotom bil povernut na 45, 90, 135, 180 geadusov");
+            if ((A1 == C1) and (F < 0) and ((A != 1) and (C != 1))) {
+                ret(cout << "Ellipse, kotoriy povorotom bil povernut na 45, 90, 135, 180 gradusov");
             }
             if ((A1 == C1) and (F > 0)){
                 ret(cout << "Pustoe mnojestvo");
@@ -70,12 +70,15 @@ int main() {
             if (exc == 1) {
                 ret(cout << "Otrezok " << 1 << endl;)
             }
-            if (exc == 0) {
+            if ((exc == 0) or ((A != 0) and (B ==0) and (C != 0) and (D == 0) and (E == 0) and (F < 0))) {
                 ret(cout << "Okruzhost " << 0 << endl;)
             }
-            if (exc == 123)
-            ret(cout << "Tochka")
+            if (exc == 123) {
+                ret(cout << "Tochka" << endl;)
+            }
         }
+        if ((A != 0) and (C != 0) and (B == 0) and (D == 0) and (E == 0) and (F == 0))
+            ret(cout << "Tochka" << endl;)
         else {
             ret(printf("Pustoe mnozhestvo");)
         }
