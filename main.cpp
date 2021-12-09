@@ -52,7 +52,7 @@ int main() {
 
     if ((A*C) - (B * B /4) > 0) {
         if ((a2 > 0) and (b2 > 0)) {
-            if ((A1 == C1) and (F < 0) and ((A != 1) and (C != 1))) {
+            if ((A1 == C1) and (F < 0) and ((D != 0) or (E != 0))) {
                 ret(cout << "Ellipse, kotoriy povorotom bil povernut na 45, 90, 135, 180 gradusov");
             }
             if ((A1 == C1) and (F > 0)){
