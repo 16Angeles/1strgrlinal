@@ -11,6 +11,10 @@ int main() {
     {
         ret(cout << "Pustoe mnojestvo " << endl;)
     }
+    if ((A == 0) and (B == 0) and (C == 0) and (D == 0) and (E == 0) and (F == 0))
+    {
+        ret(cout << "Tojdestvo " << endl;)
+    }
 
     if (A - C == 0)
         f = atan(1.0);
@@ -38,11 +42,11 @@ int main() {
         }
         if (B == (2 * sqrt(A) * sqrt(C))) {
             if (F > 0)
-                ret(cout << "Pustoe mnojestvo");
+            ret(cout << "Pustoe mnojestvo");
             if (F == 0)
-                ret(cout << "Pryamie kotorie sovpali");
+            ret(cout << "Pryamie kotorie sovpali");
             if (F < 0)
-                ret(cout << "Para pryamih");
+            ret(cout << "Para pryamih");
         }
     }
 
@@ -70,7 +74,7 @@ int main() {
                 ret(cout << "Okruzhost " << 0 << endl;)
             }
             if (exc == 123)
-                ret(cout << "Tochka")
+            ret(cout << "Tochka")
         }
         else {
             ret(printf("Pustoe mnozhestvo");)
@@ -91,7 +95,7 @@ int main() {
         {
             exc = sqrt(abs(a2) + abs(b2))/ sqrt(b2);
             ret( cout << "Hyperbola, " << "Excentricitet = " << exc << endl;)
-            }
+        }
         else {
             ret(cout << "Pustoe mnojestvo ili puchok pryamih (puchok esli b != 0)";)
         }
@@ -111,7 +115,7 @@ int main() {
             ret(cout << "Tochka " << endl;)
         }
         if (F < 0)
-            ret(cout << "Parallelnie pryamie" << endl;)
+        ret(cout << "Parallelnie pryamie" << endl;)
     }
 
     if ((B == 0 ) and (A == 0) and (D == 0) and (E == 0)) {
@@ -122,7 +126,7 @@ int main() {
             ret(cout << "Tochka " << endl;)
         }
         if (F < 0)
-            ret(cout << "Parallelnie pryamie" << endl;)
+        ret(cout << "Parallelnie pryamie" << endl;)
     }
     return 0;
 }
