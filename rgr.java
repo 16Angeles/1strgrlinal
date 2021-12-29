@@ -17,11 +17,7 @@ public class Main {
 
         if ((A == 0) && (B == 0) && (C == 0) && (D == 0) && (E == 0) && (F != 0)) {
             System.out.println("Пустое множество");
-            return;
-        }
-
-        if ((A == 0) && (B == 0) and (C == 0) && (D == 0) && (E == 0) && (F == 0)){
-            System.out.println("0=0 тождество");
+            // кажется, что еще было бы неплохо рассмотреть случай, когда все нули?
             return;
         }
 
@@ -59,8 +55,8 @@ public class Main {
 
         if ((A * C) - (B * B / 4) > 0) {
             if ((a2 > 0) && (b2 > 0)) {
-                if ((A1 == C1) && (F < 0) && ((D != 0) or (E != 0))) {
-                    System.out.println("Эллипс, который был повернут на п/4");
+                if ((A1 == C1) && (F < 0)) {
+                    System.out.println("Эллипс, который был повернут на 45, 90, 135, 180 градусов");
                     return;
                 } else if ((A1 == C1) && (F > 0)) {
                     System.out.println("Пустое множество");
@@ -76,40 +72,25 @@ public class Main {
                     System.out.println("Эллипс, эксцентриситет = " + exc);
                 else if (exc == 1)
                     System.out.println("Отрезок, эксцентриситет = 1");
-                else if (exc == 0) or ((A != 0) && (B ==0) && (C != 0) && (D == 0) && (E == 0)) && (F < 0)) && (a2 == b2) && (F < 0)))
+                else if (exc == 0)
                     System.out.println("Окружность, эксцентриситет = 0");
                 else if (Double.isNaN(exc))
                     System.out.println("Точка");
-            }
-            if ((A != 0) && (C != 0) && (B == 0) && (D == 0) && (E == 0) && (F == 0)) {
-                System.out.println("Точка");
-            }
-            else {
+            } else {
                 System.out.println("Пустое множество");
             }
             return;
         }
 
         if (((A * C) - (B * B) / 4) < 0) {
-
+            // условие на a2 == 1 и b2 == -1 является подмножеством первого, идея предложила его выкинуть
             if (a2 > 0 && b2 < 0 || A == 0 && C == 0 && F != 0)
                 exc = (sqrt(a2 + abs(b2))) / a;
-                if (a == 0){
-                    System.out.println("pair of intersecting lines");
-                }
-                else {
-                    System.out.println("Гипербола, эксцентриситет = " + exc);
-                }
             else if ((a2 < 0) && (b2 > 0))
                 exc = (sqrt(abs(a2) + b2) / sqrt(b2));
-            else if (A == 0 || C == 0 || ((A != 0) && (B != 0) && (C != 0)))
+            else if (A == 0 || C == 0 || B != 0)
+                // тут тоже сжал условие в соответствии с подсказками идеи
                 exc = sqrt(abs(a2) + abs(b2)) / sqrt(b2);
-                if (sqrt(b2) == 0) {
-                    System.out.println("pair of intersecting lines");
-                }
-                else {
-                    System.out.println("Гипербола, эксцентриситет = " + exc);
-                }
             else {
                 System.out.println("Пустое множество или пучок прямых (пучок, если b != 0)");
                 return;
@@ -121,7 +102,7 @@ public class Main {
                 System.out.println("Прямая");
                 return;
             }
-
+            // чуть-чуть странно, что если не так, то ты не сразу этот случай обрабатываешь
         }
         if ((B == 0) && (C == 0) && (D == 0) && (E == 0)) {
             if (F > 0)
@@ -133,7 +114,8 @@ public class Main {
             return;
         }
         if ((B == 0) && (A == 0) && (D == 0) && (E == 0)) {
-
+            // казалось бы, тут написано то же самое, что и в прошлом ифе
+            // почему бы не объединить?...
             if (F > 0)
                 System.out.println("Пустое множество");
             else if (F == 0)
